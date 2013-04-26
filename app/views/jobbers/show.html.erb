@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @jobber.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @jobber.last_name %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @jobber.country %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @jobber.organization %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @jobber.category %>
+</p>
+
+<p>
+  <b>Job description:</b>
+  <%= @jobber.job_description %>
+</p>
+
+<p>
+  <b>Donation amt:</b>
+  <%= @jobber.donation_amt %>
+</p>
+
+
+<%= link_to 'Edit', edit_jobber_path(@jobber) %> |
+<%= link_to 'Back', jobbers_path %>

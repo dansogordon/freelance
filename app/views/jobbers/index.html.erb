@@ -1,0 +1,35 @@
+<h1>Listing jobbers</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Country</th>
+    <th>Organization</th>
+    <th>Category</th>
+    <th>Job description</th>
+    <th>Donation amt</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<table>
+<% @jobbers.each do |jobber| %>
+  <tr>
+    <td><%= jobber.first_name %><%= jobber.last_name %></td>
+    <td><%= jobber.last_name %></td>
+    <td><%= jobber.country %></td>
+    <td><%= jobber.organization %></td>
+    <td><%= jobber.category %></td>
+    <td><%= jobber.job_description %></td>
+    <td><%= jobber.donation_amt %></td>
+    <td><%= link_to 'Show', jobber %></td>
+    <td><%= link_to 'Edit', edit_jobber_path(jobber) %></td>
+    <td><%= link_to 'Destroy', jobber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Jobber', new_jobber_path %>
